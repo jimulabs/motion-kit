@@ -34,20 +34,17 @@ import java.util.*;
  */
 public abstract class MirrorAnimator {
 
-    private final Context mContext;
-
-    public MirrorAnimator(Context context) {
-        mContext = context;
+    public MirrorAnimator() {
     }
 
     public MirrorAnimator together(MirrorAnimator... mirrorAnimators) {
         List<MirrorAnimator> mas = mePlus(mirrorAnimators);
-        return MotionKit.together(mContext, mas);
+        return MotionKit.together(mas);
     }
 
     public MirrorAnimator followedBy(MirrorAnimator mirrorAnimator) {
         List<MirrorAnimator> mas = mePlus(mirrorAnimator);
-        return MotionKit.sequence(mContext, mas);
+        return MotionKit.sequence(mas);
     }
 
     public abstract Animator getAnimator();
@@ -59,8 +56,8 @@ public abstract class MirrorAnimator {
         return result;
     }
 
-    public MirrorAnimator interpolator(int resId) {
-        MotionKit.setInterpolator(mContext, getAnimator(), resId);
+    public MirrorAnimator interpolator(Context context, int resId) {
+        MotionKit.setInterpolator(context, getAnimator(), resId);
         return this;
     }
 

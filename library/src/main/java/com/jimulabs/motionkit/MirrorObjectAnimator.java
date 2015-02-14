@@ -20,8 +20,8 @@ public class MirrorObjectAnimator extends MirrorAnimator {
     private final Keyframe mFirstFrame;
     private final Keyframe mLastFrame;
 
-    public MirrorObjectAnimator(Context context, ObjectAnimator animator, Keyframe firstFrame, Keyframe lastFrame) {
-        super(context);
+    public MirrorObjectAnimator(ObjectAnimator animator, Keyframe firstFrame, Keyframe lastFrame) {
+        super();
         mAnimator = animator;
         mFirstFrame = firstFrame;
         mLastFrame = lastFrame;

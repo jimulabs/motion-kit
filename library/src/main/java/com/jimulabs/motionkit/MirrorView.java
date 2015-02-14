@@ -17,7 +17,7 @@ public class MirrorView<T extends View> extends MirrorWrap {
     }
 
     public MirrorAnimator scale(float... values) {
-        return MotionKit.together(mView.getContext(), scaleX(values), scaleY(values));
+        return MotionKit.together(scaleX(values), scaleY(values));
     }
 
     public MirrorAnimator scaleY(float... values) {

@@ -19,8 +19,8 @@ public class MirrorAnimatorSet extends MirrorAnimator {
     private final Ordering mOrdering;
     private final AnimatorSet mSet;
 
-    public MirrorAnimatorSet(Context context, List<MirrorAnimator> animators, Ordering ordering) {
-        super(context);
+    public MirrorAnimatorSet(List<MirrorAnimator> animators, Ordering ordering) {
+        super();
         mAnimators = Collections.unmodifiableList(animators);
         mOrdering = ordering;
         mSet = new AnimatorSet();
