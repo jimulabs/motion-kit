@@ -5,10 +5,8 @@
 MotionKit is a set of libraries aiming to simplify the development of Android animations.
 
 #Download
-TODO: put on Maven Central
-via Gradle:
 ```
-compile 'com.jimulabs.motionkit:motion-kit:0.1.+'
+compile 'com.jimulabs.motionkit:motion-kit:0.1.0'
 ```
 #Usage
 
